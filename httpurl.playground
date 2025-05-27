@@ -1,0 +1,34 @@
+import Foundation
+import PlaygroundSupport
+
+
+PlaygroundPage.current.needsIndefiniteExecution = true
+
+let url = URL(string: "https://www.apple.com")!
+
+var req = URLRequest(url: url)
+req.httpMethod = "GET"
+
+print("URL: \(req.url ?? URL(string: "")!)")
+
+print("headers: \(req.allHTTPHeaderFields ?? [:])")
+print("method: \(req.httpMethod ?? "nil")")
+print("body: \(req.httpBody ?? Data())")
+let task = URLSession.shared.dataTask(with: req) { data, resp, _ in
+    let httpresp = resp as! HTTPURLResponse
+    print("HTTP status code: \(httpresp.statusCode)")
+    
+    httpresp.allHeaderFields.forEach { (key, value) in
+        print("key: \(key)")
+        print("val: \(value)")
+        
+    }
+    print(data ?? Data())
+    
+    print("yay all Done!")
+    
+    PlaygroundPage.current.finishExecution()
+}
+
+task.resume()
+
