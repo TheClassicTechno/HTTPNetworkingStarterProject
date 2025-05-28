@@ -2,6 +2,8 @@
 
 just some starter apps I made to refresh my memory on http and networking concepts:)
 
+theres a bug in main.mm last function rn
+
 # project description
 3 in 1 project, all doing HTTP get responses and printing out headers, body, status code, etc, but using different APIs and languages (Swift, Objective C, C++)
 
