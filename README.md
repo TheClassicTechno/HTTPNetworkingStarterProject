@@ -17,6 +17,7 @@ value: The header value (e.g. "application/json", "Mon, 27 May 2025 10:00:00 GMT
 
 converts raw byte data into a readable string
 
+CFRunLoopStop(CFRunLoopGetMain());  
 line is used to stop the main run loop in a macOS or iOS application, usually in non-UI contexts like command-line tools or unit tests.
 
 What does task resume do?
@@ -25,3 +26,5 @@ Or resumes the task if it was previously suspended.
 Without calling resume, the task will not start and no network request happens.
 
 An autorelease pool is a mechanism used in Objective-C to manage the memory of objects that are sent an autoreleasemessage. It helps automatically release objects at a later time, avoiding memory leaks without requiring you to manually release every object immediately.
+
+%@ is used with NSLog or NSString to print objects, like strings or custom classes that inherit from NSObject
