@@ -30,3 +30,6 @@ Without calling resume, the task will not start and no network request happens.
 An autorelease pool is a mechanism used in Objective-C to manage the memory of objects that are sent an autoreleasemessage. It helps automatically release objects at a later time, avoiding memory leaks without requiring you to manually release every object immediately.
 
 %@ is used with NSLog or NSString to print objects, like strings or custom classes that inherit from NSObject
+
+
+useTLS flag: set to true ⇒ TLS over port 443; false ⇒ plain TCP on port 80.
