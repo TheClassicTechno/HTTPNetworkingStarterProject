@@ -65,7 +65,7 @@ func main() {
     let end = NWEndpoint.hostPort(host: .init(hostS), port: port) 
     let connection = NWConnection(to: end, using: params)
   
-    connection.stateUpdateHandler = { state:NWConnection.State) in
+    connection.stateUpdateHandler = { (state:NWConnection.State) in
         switch state {
         case .waiting(let error):
             print("connection error: \(error)")
